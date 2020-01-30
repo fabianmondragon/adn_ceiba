@@ -30,6 +30,9 @@ android {
         }
     }
 }
+jacocoAndroidUnitTestReport {
+    xml.enabled true
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
