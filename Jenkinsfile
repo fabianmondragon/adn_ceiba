@@ -27,8 +27,8 @@ pipeline {
     stage('Compile & Unit Tests') {
       steps{
         echo "------------>Unit Tests<------------"
-		sh './gradlew check'
-
+		sh './gradlew --b app/build.gradle'
+        sh 'gradle --b app/build.gradle jacocoTestReport'
       }
     }
 
